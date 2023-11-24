@@ -52,10 +52,10 @@ private extension SearchView {
     var searchPicker: some View {
         VStack {
             Picker(selection: $selectedSearchOption, label: Text("Search Options")) {
-                Image(systemName: "list.bullet.indent").tag(SearchType.category)
+                Image(systemName: "square.filled.on.square").tag(SearchType.category)
                 Image(systemName: "globe").tag(SearchType.area)
                 Image(systemName: "carrot").tag(SearchType.ingredient)
-                Image(systemName: "magnifyingglass").tag(SearchType.meal)
+                Image(systemName: "fork.knife.circle.fill").tag(SearchType.meal)
             }
             .pickerStyle(SegmentedPickerStyle())
             .padding([.trailing, .leading], 16)

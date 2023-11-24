@@ -64,7 +64,7 @@ private extension EditRecipeView {
                         Image(systemName: "photo.fill")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: 180, height: 180)
+                            .frame(width: 180, height: 220)
                     @unknown default:
                         EmptyView()
                     }
