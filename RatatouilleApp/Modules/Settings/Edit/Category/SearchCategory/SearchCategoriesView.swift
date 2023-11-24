@@ -22,7 +22,7 @@ struct SearchCategoriesView: View {
     var body: some View {
         VStack {
             List {
-                Section(header: Text("Søk kategorier")) {
+                Section(header: Text("Kategorier")) {
                     ForEach(categories, id: \.self) { category in
                         HStack {
                             ZStack {
@@ -57,7 +57,7 @@ struct SearchCategoriesView: View {
                 fetchCategories()
             }
         }
-        .navigationTitle("Søk") 
+        .navigationTitle("Finn kategori") 
     }
 }
 

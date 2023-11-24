@@ -20,7 +20,7 @@ struct SearchIngredientsView: View {
     var body: some View {
         VStack {
             List {
-                Section(header: Text("Søk etter ingredienser")) {
+                Section(header: Text("Ingredienser")) {
                     ForEach(ingredients, id: \.self) { ingredient in
                         HStack {
                             ZStack {
@@ -53,7 +53,7 @@ struct SearchIngredientsView: View {
                 fetchIngredients()
             }
         }
-        .navigationTitle("Søk")
+        .navigationTitle("Finn ingrediens")
     }
 }
 

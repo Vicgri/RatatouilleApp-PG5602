@@ -141,7 +141,7 @@ private extension ManageArchivesView {
         }
     }
     var archievedAreasSection: some View {
-        Section(header: Text("Landomrader")) {
+        Section(header: Text("Landområder")) {
             ForEach(savedAreas) { savedArea in
                 if savedArea.isArchieved {
                     HStack {

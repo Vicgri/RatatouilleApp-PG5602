@@ -9,17 +9,14 @@ import Foundation
 import SwiftUI
 
 struct EditCategoryView: View {
-    
-    // MARK: - Properties
+
     
     @ObservedObject var category: Category
     
     @Environment(\.managedObjectContext) private var viewContext
     
     @State private var editedName = ""
-    
-    
-    // MARK: - Main View Configuration
+  
     
     var body: some View {
         Form {
@@ -61,8 +58,7 @@ struct EditCategoryView: View {
 
 
 private extension EditCategoryView {
-    
-    // MARK: - Main Logic
+
     
     func setInitialName() {
         editedName = category.name ?? ""

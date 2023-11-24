@@ -60,7 +60,7 @@ struct SearchAreaSheetView: View {
                 fetchAreas()
             }
         }
-        .navigationTitle("Søk")
+        .navigationTitle("Landområder")
     }
 }
 
