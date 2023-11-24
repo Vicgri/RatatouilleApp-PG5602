@@ -37,13 +37,13 @@ private extension SettingsView {
     var editRecipesPropertiesSection: some View {
         Section {
             NavigationLink(destination: EditAreasView()) {
-                baseNavigationLinkCell("Redigere landomrader", iconName: "globe")
+                baseNavigationLinkCell("Rediger landomrader", iconName: "globe")
             }
             NavigationLink(destination: EditCategoriesView()) {
-                baseNavigationLinkCell("Redigere kategorier", iconName: "list.dash")
+                baseNavigationLinkCell("Rediger kategorier", iconName: "square.filled.on.square")
             }
             NavigationLink(destination: EditIngredientsView()) {
-                baseNavigationLinkCell("Redigere ingredienser", iconName: "carrot")
+                baseNavigationLinkCell("Rediger ingredienser", iconName: "carrot")
             }
         }
     }

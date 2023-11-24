@@ -10,7 +10,6 @@ import SwiftUI
 
 struct SearchCategoriesView: View {
     
-    // MARK: - Properties
     
     @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.presentationMode) var presentationMode
@@ -18,13 +17,12 @@ struct SearchCategoriesView: View {
     @State private var searchText = ""
     @State private var categories: [CategoryAPI] = []
     
-    
-    // MARK: - Main View Configuration
+
     
     var body: some View {
         VStack {
             List {
-                Section(header: Text("Search Categories")) {
+                Section(header: Text("Søk kategorier")) {
                     ForEach(categories, id: \.self) { category in
                         HStack {
                             ZStack {
@@ -48,7 +46,7 @@ struct SearchCategoriesView: View {
                             Button {
                                 saveCategory(category)
                             } label: {
-                                Label("Save", systemImage: "square.and.arrow.down")
+                                Label("Lagre", systemImage: "square.and.arrow.down")
                             }
                             .tint(.blue)
                         }
@@ -65,9 +63,7 @@ struct SearchCategoriesView: View {
 
 
 private extension SearchCategoriesView {
-    
-    // MARK: - Main Logic
-    
+
     func saveCategory(_ category: CategoryAPI) {
         CoreDataManager.shared.addCategory(categoryAPI: category, viewContext: viewContext)
         presentationMode.wrappedValue.dismiss()

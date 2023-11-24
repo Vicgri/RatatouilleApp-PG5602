@@ -9,8 +9,7 @@ import Foundation
 import SwiftUI
 
 struct EditCategoriesView: View {
-    
-    // MARK: - Properties
+
     
     @Environment(\.managedObjectContext) private var viewContext
     
@@ -18,8 +17,7 @@ struct EditCategoriesView: View {
     
     @State private var isSearchSheetPresented = false
     
-    
-    // MARK: - Main View Configuration
+
     
     var body: some View {
         List {
@@ -48,7 +46,7 @@ struct EditCategoriesView: View {
                         Button {
                             archive(category)
                         } label: {
-                            Label("Archive", systemImage: "archivebox.fill")
+                            Label("Arkiver", systemImage: "archivebox.fill")
                         }
                         .tint(.blue)
                     }
@@ -62,8 +60,7 @@ struct EditCategoriesView: View {
 
 
 private extension EditCategoriesView {
-    
-    // MARK: - Main Logic
+
     
     func archive(_ category: Category) {
         withAnimation {

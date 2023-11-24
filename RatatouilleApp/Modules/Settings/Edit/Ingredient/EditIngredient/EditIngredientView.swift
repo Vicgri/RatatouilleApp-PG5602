@@ -9,8 +9,7 @@ import Foundation
 import SwiftUI
 
 struct EditIngredientView: View {
-    
-    // MARK: - Properties
+
     
     @ObservedObject var ingredient: Ingredient
     
@@ -18,9 +17,7 @@ struct EditIngredientView: View {
     
     @State private var editedName = ""
     @State private var editedDesc = ""
-    
-    
-    // MARK: - Main View Configuration
+
     
     var body: some View {
         Form {
@@ -45,7 +42,7 @@ struct EditIngredientView: View {
                 .listRowBackground(Color(.systemGroupedBackground))
             }
             Section {
-                TextField("Edit Category Name", text: $editedName)
+                TextField("Endre ingrediens navn", text: $editedName)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                 TextEditor(text: $editedDesc)
@@ -55,17 +52,16 @@ struct EditIngredientView: View {
                 setInitialName()
             }
         }
-        .navigationBarItems(trailing: Button("Save") {
+        .navigationBarItems(trailing: Button("Lagre") {
             saveChanges()
         })
-        .navigationTitle("Edit Category")
+        .navigationTitle("Rediger ingrediens")
     }
 }
 
 
 private extension EditIngredientView {
-    
-    // MARK: - Main Logic
+
     
     func setInitialName() {
         editedName = ingredient.name ?? ""

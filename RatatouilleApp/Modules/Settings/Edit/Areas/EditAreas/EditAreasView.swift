@@ -10,16 +10,13 @@ import SwiftUI
 import CoreData
 
 struct EditAreasView: View {
-    
-    // MARK: - Properties
+
     
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(entity: Area.entity(), sortDescriptors: []) private var areas: FetchedResults<Area>
     
     @State private var isSearchSheetPresented = false
-    
-    
-    // MARK: - Main View Configuration
+
     
     var body: some View {
         List {
@@ -53,14 +50,14 @@ struct EditAreasView: View {
                         Button {
                             archieveArea(area)
                         } label: {
-                            Label("Archive", systemImage: "archivebox.fill")
+                            Label("Arkiver", systemImage: "archivebox.fill")
                         }
                         .tint(.blue)
                     }
                 }
             }
         }
-        .navigationTitle("Landområder") 
+        .navigationTitle("Rediger landområder") 
         .navigationBarItems(trailing: NavigationLink(destination: SearchAreaSheetView(), label: { Image(systemName: "plus") }))
     }
 }

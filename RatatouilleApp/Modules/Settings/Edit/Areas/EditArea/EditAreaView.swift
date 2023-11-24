@@ -10,7 +10,6 @@ import SwiftUI
 
 struct EditAreaView: View {
     
-    // MARK: - Properties
     
     @ObservedObject var area: Area
     
@@ -18,8 +17,6 @@ struct EditAreaView: View {
     
     @State private var editedName = ""
     
-    
-    // MARK: - Main View Configuration
     
     var body: some View {
         VStack {
@@ -51,7 +48,7 @@ struct EditAreaView: View {
                     .listRowBackground(Color(.systemGroupedBackground))
                 }
                 Section {
-                    TextField("Edit Area Name", text: $editedName)
+                    TextField("Endre navn på landområde", text: $editedName)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding()
                         .onAppear {
@@ -60,10 +57,10 @@ struct EditAreaView: View {
                 }
             }
         }
-        .navigationBarItems(trailing: Button("Save") {
+        .navigationBarItems(trailing: Button("Lagre") {
             saveChanges()
         })
-        .navigationTitle("Edit Area")
+        .navigationTitle("Rediger landområde")
     }
 }
 

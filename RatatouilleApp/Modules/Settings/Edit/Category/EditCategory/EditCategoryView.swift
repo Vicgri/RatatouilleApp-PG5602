@@ -44,7 +44,7 @@ struct EditCategoryView: View {
                 .listRowBackground(Color(.systemGroupedBackground))
             }
             Section {
-                TextField("Edit Category Name", text: $editedName)
+                TextField("Endre kategori navn", text: $editedName)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                     .onAppear {
@@ -52,10 +52,10 @@ struct EditCategoryView: View {
                     }
             }
         }
-        .navigationBarItems(trailing: Button("Save") {
+        .navigationBarItems(trailing: Button("Lagre") {
             saveChanges()
         })
-        .navigationTitle("Edit Category")
+        .navigationTitle("Rediger kategori")
     }
 }
 

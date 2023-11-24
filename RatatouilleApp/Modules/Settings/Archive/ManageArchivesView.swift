@@ -9,8 +9,7 @@ import SwiftUI
 import CoreData
 
 struct ManageArchivesView: View {
-    
-    // MARK: - Properties
+
     
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(
@@ -33,9 +32,7 @@ struct ManageArchivesView: View {
             SortDescriptor(\.name, order: .reverse)
         ]
     ) private var savedCategories: FetchedResults<Category>
-    
-    
-    // MARK: - Main View Configuration
+
     
     var body: some View {
         List {
@@ -51,8 +48,7 @@ struct ManageArchivesView: View {
 
 
 private extension ManageArchivesView {
-    
-    // MARK: - Views
+
     
     var archievedIngredientsSection: some View {
         Section(header: Text("Ingredienser")) {
@@ -70,7 +66,7 @@ private extension ManageArchivesView {
                         Button {
                             delete(savedIngredient)
                         } label: {
-                            Label("Delete", systemImage: "trash")
+                            Label("Slett", systemImage: "trash")
                         }
                         .tint(.red)
                         
@@ -100,7 +96,7 @@ private extension ManageArchivesView {
                         Button {
                             delete(category)
                         } label: {
-                            Label("Delete", systemImage: "trash")
+                            Label("Slett", systemImage: "trash")
                         }
                         .tint(.red)
                         
@@ -130,7 +126,7 @@ private extension ManageArchivesView {
                         Button {
                             delete(savedRecipe)
                         } label: {
-                            Label("Delete", systemImage: "trash")
+                            Label("Slett", systemImage: "trash")
                         }
                         .tint(.red)
                         
@@ -160,7 +156,7 @@ private extension ManageArchivesView {
                         Button {
                             delete(savedArea)
                         } label: {
-                            Label("Delete", systemImage: "trash")
+                            Label("Slett", systemImage: "trash")
                         }
                         .tint(.red)
                         
@@ -180,8 +176,8 @@ private extension ManageArchivesView {
 
 private extension ManageArchivesView {
     
-    // MARK: - Main Logic
-    
+  // Functions for managing the archive
+  
     func removeFromArchive(_ recipe: Meal) {
         withAnimation {
             recipe.isArchived.toggle()

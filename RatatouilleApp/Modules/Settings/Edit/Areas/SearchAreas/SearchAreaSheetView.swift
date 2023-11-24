@@ -9,8 +9,7 @@ import Foundation
 import SwiftUI
 
 struct SearchAreaSheetView: View {
-    
-    // MARK: - Properties
+
     
     @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.presentationMode) var presentationMode
@@ -18,8 +17,6 @@ struct SearchAreaSheetView: View {
     @State private var searchText = ""
     @State private var areas: [AreaAPI] = []
     
-    
-    // MARK: - Main View Configuration
     
     var body: some View {
         VStack {
@@ -53,7 +50,7 @@ struct SearchAreaSheetView: View {
                         Button {
                             saveArea(area)
                         } label: {
-                            Label("Save", systemImage: "square.and.arrow.down")
+                            Label("Lagre", systemImage: "square.and.arrow.down")
                         }
                         .tint(.blue)
                     }
@@ -69,9 +66,7 @@ struct SearchAreaSheetView: View {
 
 
 private extension SearchAreaSheetView {
-    
-    // MARK: - Main Logic
-    
+
     func saveArea(_ area: AreaAPI) {
         CoreDataManager.shared.addArea(areaAPI: area, iconURL: "https://flagsapi.com/\(area.strArea.transformCountryName())/flat/64.png", viewContext: viewContext)
         presentationMode.wrappedValue.dismiss()

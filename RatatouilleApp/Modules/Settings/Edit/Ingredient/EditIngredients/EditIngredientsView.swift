@@ -8,16 +8,13 @@
 import SwiftUI
 
 struct EditIngredientsView: View {
-    
-    // MARK: - Properties
+
     
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(entity: Ingredient.entity(), sortDescriptors: []) private var ingredients: FetchedResults<Ingredient>
     
     @State private var isSearchSheetPresented = false
-    
-    
-    // MARK: - Main View Configuration
+
     
     var body: some View {
         List {
@@ -47,7 +44,7 @@ struct EditIngredientsView: View {
                         Button {
                             archieveIngredient(ingredient)
                         } label: {
-                            Label("Archive", systemImage: "archivebox.fill")
+                            Label("Arkiver", systemImage: "archivebox.fill")
                         }
                         .tint(.blue)
                     }
@@ -61,8 +58,6 @@ struct EditIngredientsView: View {
 
 
 private extension EditIngredientsView {
-    
-    // MARK: - Main Logic
     
     func archieveIngredient(_ ingredient: Ingredient) {
         withAnimation {

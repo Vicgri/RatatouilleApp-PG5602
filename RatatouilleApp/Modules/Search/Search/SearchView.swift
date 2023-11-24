@@ -39,7 +39,7 @@ struct SearchView: View {
                 SearchSheetView(searchOption: selectedSearchOption.rawValue, searchText: $searchText, isPresented: $isPresentingSearchSheet) {
                     loadMeals()
                 }
-                .presentationDetents([.height(250)])
+                .presentationDetents([.height(330)])
                 .presentationDragIndicator(.visible)
             }
         }

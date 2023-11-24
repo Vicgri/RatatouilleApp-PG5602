@@ -9,16 +9,13 @@ import SwiftUI
 
 struct SearchIngredientsView: View {
     
-    // MARK: - Properties
     
     @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.presentationMode) var presentationMode
     
     @State private var searchText = ""
     @State private var ingredients: [IngredientAPI] = []
-    
-    
-    // MARK: - Main View Configuration
+
     
     var body: some View {
         VStack {
@@ -45,7 +42,7 @@ struct SearchIngredientsView: View {
                             Button {
                                 saveIngredient(ingredient)
                             } label: {
-                                Label("Save", systemImage: "square.and.arrow.down")
+                                Label("Lagre", systemImage: "square.and.arrow.down")
                             }
                             .tint(.blue)
                         }
@@ -62,8 +59,6 @@ struct SearchIngredientsView: View {
 
 
 private extension SearchIngredientsView {
-    
-    // MARK: - Main Logic
     
     func saveIngredient(_ ingredient: IngredientAPI) {
         CoreDataManager.shared.addIngredient(ingredientAPI: ingredient, viewContext: viewContext)
