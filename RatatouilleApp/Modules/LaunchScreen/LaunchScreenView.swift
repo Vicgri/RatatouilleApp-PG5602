@@ -12,8 +12,7 @@ struct LaunchScreenView: View {
     
     
     @StateObject private var viewModel = LaunchScreenViewModel()
-    
-    
+        
     var body: some View {
         ZStack {
             backgroundColor

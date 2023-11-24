@@ -95,8 +95,6 @@ private extension EditRecipeView {
 
 private extension EditRecipeView {
     
-    // Main Logic
-    
     func save() {
         CoreDataManager.shared.editReciepe(
             reciept: recipe,

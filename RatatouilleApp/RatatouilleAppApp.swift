@@ -7,19 +7,18 @@
 
 import SwiftUI
 
-@main
-struct RatatouilleAppApp: App {
+@main struct RatatouilleAppApp: App {
     
     private let coreDataManager = CoreDataManager.shared
     
-    // MARK: - App Storage Properties
+    // App Storage Properties
     
     @AppStorage(AppStorageConstants.appearance) private var isDarkMode = false
     @AppStorage(AppStorageConstants.firstLaunch) private var hasLaunchedBefore = false
     
     init() {
         
-        // MARK: - UISegmentedControl Appearance Configuration
+        // UISegmentedControl Appearance Configuration
         
         UISegmentedControl.appearance().backgroundColor = .accent.withAlphaComponent(0.15)
         UISegmentedControl.appearance().setDividerImage(UIImage(), forLeftSegmentState: .normal, rightSegmentState: .normal, barMetrics: .default)
@@ -30,7 +29,7 @@ struct RatatouilleAppApp: App {
     var body: some Scene {
         WindowGroup {
             
-            // MARK: - Initial View Logic
+            // Initial View Logic
             
             if hasLaunchedBefore {
                 ContentView()

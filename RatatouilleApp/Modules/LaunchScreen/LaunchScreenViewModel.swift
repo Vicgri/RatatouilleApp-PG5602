@@ -9,14 +9,13 @@ import Foundation
 import SwiftUI
 
 class LaunchScreenViewModel: ObservableObject {
-    
-    // MARK: - Properties
+  
     
     @Published var hatOffset: CGFloat = -500
     @Published var isAnimating = false
     
-    // MARK: - Main Logic
-    
+// Function for animation
+  
     func startAnimations() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             withAnimation {

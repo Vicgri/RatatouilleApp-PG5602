@@ -11,8 +11,10 @@ import CoreData
 
 struct MyRecipesView: View {
     
+  // Accesses the managed object context from the environment for Core Data operations
     @Environment(\.managedObjectContext) private var viewContext
     
+  // Fetch request for 'Meal' entities, sorted in reverse order by their 'name' attribute
     @FetchRequest(
         sortDescriptors: [
             SortDescriptor(\.name, order: .reverse)
@@ -63,11 +65,12 @@ struct MyRecipesView: View {
 
 
 private extension MyRecipesView {
-    
-    // MARK: - Views
+
     
     var emptyMealsView: some View {
         VStack(alignment: .center, content: {
+          
+  
             Image(systemName: "square.stack.3d.up.slash")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
@@ -78,16 +81,21 @@ private extension MyRecipesView {
             Text("Ingen matoppskrifter")
                 .font(.headline)
                 .fontWeight(.bold)
+
+          
         })
+      
         .toolbar {
             ToolbarItem(placement: .principal) {
                 Image("MyReciepesIcon")
                     .resizable()
-                    .frame(width: 100, height: 50)
+                    .frame(width: 150, height: 70)
                     .padding()
             }
         }
+      
     }
+  
     func rowPreviewImage(_ meal: Meal) -> some View {
         AsyncImage(url: URL(string: meal.iconURL!)) { phase in
             switch phase {
@@ -97,13 +105,13 @@ private extension MyRecipesView {
                 image
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 42, height: 42)
+                    .frame(width: 41, height: 41)
                     .cornerRadius(21)
             case .failure:
                 Image(systemName: "photo.fill")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 42, height: 42)
+                    .frame(width: 41, height: 41)
             @unknown default:
                 EmptyView()
             }
@@ -114,7 +122,7 @@ private extension MyRecipesView {
         VStack(alignment: .leading) {
             Text(meal.name ?? "Ukjent navn")
                 .fontWeight(.semibold)
-            Text(meal.category ?? "Gå til detalj for å se kategori.")
+            Text(meal.category ?? "For å se kategori gå til detaljer.")
         }
     }
     var favouriteIcon: some View {
@@ -140,7 +148,7 @@ private extension MyRecipesView {
     var navigationBarIcon: some View {
         Image("MyReciepesIcon")
             .resizable()
-            .frame(width: 100, height: 50)
+            .frame(width: 150, height: 70)
             .padding()
     }
 }
@@ -148,7 +156,6 @@ private extension MyRecipesView {
 
 private extension MyRecipesView {
     
-    // MARK: - Main Logic
     
     func markAsFavorite(_ recipe: Meal) {
         withAnimation {

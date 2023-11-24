@@ -10,7 +10,7 @@ import SwiftUI
 
 struct IntroView: View {
     
-    // Initialization
+    // Initializes with a binding to track if the app has launched before, creating a StateObject for the IntroViewModel
     
     init(hasLaunchedBefore: Binding<Bool>) {
         _viewModel = StateObject(wrappedValue: IntroViewModel(hasLaunchedBefore: hasLaunchedBefore))

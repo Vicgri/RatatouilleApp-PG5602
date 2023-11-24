@@ -8,9 +8,7 @@
 import Foundation
 
 struct IngredientAPI: Codable, Hashable {
-    
-    // Properties
-    
+
     let idIngredient: String
     let strIngredient: String
     let strDescription: String? 

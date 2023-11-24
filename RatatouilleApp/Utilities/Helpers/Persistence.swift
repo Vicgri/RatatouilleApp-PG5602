@@ -15,7 +15,9 @@ final class CoreDataManager {
     let container: NSPersistentContainer = NSPersistentContainer(name: "RatatouilleApp")
     
     
-    // Shared
+  // Defines a static instance of CoreDataManager, creating a singleton pattern.
+  // This ensures that there's only one instance of CoreDataManager throughout the application,
+  // which can be accessed globally using CoreDataManager.shared.
     
     static let shared = CoreDataManager()
     
@@ -30,7 +32,7 @@ final class CoreDataManager {
         })
     }
     
-    // Fast CoreData update method
+    // Saves changes in the specified Core Data context and handles any errors that may occur during saving
     
     func save(viewContext: NSManagedObjectContext) {
         do {

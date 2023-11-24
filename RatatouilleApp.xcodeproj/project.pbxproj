@@ -124,10 +124,9 @@
 			isa = PBXGroup;
 			children = (
 				CE28FC5C2B04342200FF8DDA /* RatatouilleAppApp.swift */,
-				5DAF87E22B11198E00FC0DCC /* Assets.xcassets */,
 				CE28FC712B04385D00FF8DDA /* Resources */,
 				CE28FC7E2B04390500FF8DDA /* Extensions */,
-				CE28FC6F2B04384E00FF8DDA /* Utilits */,
+				CE28FC6F2B04384E00FF8DDA /* Utilities */,
 				CE28FC702B04385500FF8DDA /* Modules */,
 				CE28FC672B04342300FF8DDA /* RatatouilleApp.xcdatamodeld */,
 				CE28FC622B04342300FF8DDA /* Preview Content */,
@@ -143,14 +142,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		CE28FC6F2B04384E00FF8DDA /* Utilits */ = {
+		CE28FC6F2B04384E00FF8DDA /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				CE28FC7F2B045F5400FF8DDA /* Models */,
 				CE28FC8B2B049D6F00FF8DDA /* Constants */,
 				CE28FC752B04388C00FF8DDA /* Helpers */,
 			);
-			path = Utilits;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		CE28FC702B04385500FF8DDA /* Modules */ = {
@@ -169,6 +168,7 @@
 		CE28FC712B04385D00FF8DDA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5DAF87E22B11198E00FC0DCC /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
