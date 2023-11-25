@@ -18,7 +18,7 @@ class IntroViewModel: ObservableObject {
         _hasLaunchedBefore = hasLaunchedBefore
     }
 
-    // Skipping intro if the user has seen it before
+    // Hopper over intro hvis brukeren har sett det før.
   
     func skipIntro() {
         hasLaunchedBefore = true

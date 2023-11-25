@@ -14,7 +14,7 @@ class LaunchScreenViewModel: ObservableObject {
     @Published var hatOffset: CGFloat = -500
     @Published var isAnimating = false
     
-// Function for animation
+// Funksjon for animasjon 
   
     func startAnimations() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {

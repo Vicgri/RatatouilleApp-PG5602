@@ -9,7 +9,7 @@ import Foundation
 
 enum AppStorageConstants {
     
-    // UserDefaults Keys
+    // UserDefaults nøkler
     
     static let appearance = "Appearance"
     static let firstLaunch = "FirstLaunch"

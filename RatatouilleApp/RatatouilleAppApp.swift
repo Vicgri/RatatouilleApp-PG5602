@@ -11,14 +11,14 @@ import SwiftUI
     
     private let coreDataManager = CoreDataManager.shared
     
-    // App Storage Properties
+    // App Storage egenskaper
     
     @AppStorage(AppStorageConstants.appearance) private var isDarkMode = false
     @AppStorage(AppStorageConstants.firstLaunch) private var hasLaunchedBefore = false
     
     init() {
         
-        // UISegmentedControl Appearance Configuration
+        // UISegmentedControl utseendekonfigurasjon
         
         UISegmentedControl.appearance().backgroundColor = .accent.withAlphaComponent(0.15)
         UISegmentedControl.appearance().setDividerImage(UIImage(), forLeftSegmentState: .normal, rightSegmentState: .normal, barMetrics: .default)
@@ -29,7 +29,7 @@ import SwiftUI
     var body: some Scene {
         WindowGroup {
             
-            // Initial View Logic
+            // Innledende visningslogikk
             
             if hasLaunchedBefore {
                 ContentView()

@@ -10,12 +10,9 @@ import SwiftUI
 
 struct SettingsView: View {
     
-    // MARK: - Properties
-    
+
     @AppStorage(AppStorageConstants.appearance) private var isDarkMode = false
 
-    
-    // MARK: - Main View Configuration
     
     var body: some View {
         NavigationView {
@@ -31,8 +28,7 @@ struct SettingsView: View {
 
 
 private extension SettingsView {
-    
-    // MARK: - Views
+
     
     var editRecipesPropertiesSection: some View {
         Section {

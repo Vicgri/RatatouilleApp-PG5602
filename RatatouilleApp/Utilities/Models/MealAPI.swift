@@ -9,7 +9,7 @@ import Foundation
 
 struct MealAPI: Codable, Identifiable {
   
-  // Used to conform to the 'Identifiable' protocol which requires an 'id' property
+  // Brukt for å følge 'Identifiable'-protokollen som krever en 'id'-egenskap
     var id: String { idMeal }
     
     var idMeal: String
@@ -19,8 +19,6 @@ struct MealAPI: Codable, Identifiable {
 }
 
 struct MealAPIResponse: Codable {
-    
-    // Properties
     
     var meals: [MealAPI]
 }

@@ -65,7 +65,6 @@ struct EditAreasView: View {
 
 private extension EditAreasView {
     
-    // MARK: - Main Logic
     
     func archieveArea(_ area: Area) {
         withAnimation {

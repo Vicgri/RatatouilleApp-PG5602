@@ -7,9 +7,9 @@
 
 import Foundation
 
-enum SearchType: String {
+enum FilterSearchType: String {
     
-    // Filter Option cases
+    // Filtreringsalternativer
     
     case meal = "Oppskrift"
     case category = "Kategori"

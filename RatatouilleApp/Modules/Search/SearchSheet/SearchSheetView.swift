@@ -9,8 +9,7 @@ import Foundation
 import SwiftUI
 
 struct SearchSheetView: View {
-    
-    // MARK: - Properties
+
     
     @AppStorage(AppStorageConstants.appearance) private var isDarkMode = false
     
@@ -19,7 +18,7 @@ struct SearchSheetView: View {
     @Binding var searchText: String
     @Binding var isPresented: Bool
     
-    // MARK: - Search Query Callback
+    // Search Query Callback
     
     var onSearchTapped: () -> Void
     

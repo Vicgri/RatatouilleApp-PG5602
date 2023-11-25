@@ -9,14 +9,14 @@ import Foundation
 
 final class APIHelper {
     
-    // Singleton and Properties
+    // Singleton og egenskaper
     
     static let shared = APIHelper()
     private let session = URLSession.shared
     
-    // API Requests
+    // API forespørsel
     
-    func loadMeals(selectedSearchOption: SearchType, searchText: String, completion: @escaping (([MealAPI]) -> Void)) {
+    func loadMeals(selectedSearchOption: FilterSearchType, searchText: String, completion: @escaping (([MealAPI]) -> Void)) {
         fetch(selectURL(for: selectedSearchOption, searchText: searchText), decodingType: MealAPIResponse.self) { decodedData in
             completion(decodedData?.meals ?? [])
         }
@@ -50,7 +50,7 @@ final class APIHelper {
 
 private extension APIHelper {
     
-    //  Helper Methods
+    //  Hjelper metoder
     
     func fetch<T: Decodable>( _ urlString: String, decodingType: T.Type, completion: @escaping (T?) -> ()) {
         guard let url = URL(string: urlString) else { return }
@@ -63,7 +63,7 @@ private extension APIHelper {
         }.resume()
     }
     
-    func selectURL(for option: SearchType, searchText: String) -> String {
+    func selectURL(for option: FilterSearchType, searchText: String) -> String {
         let lowercasedSearchText = searchText.lowercased()
         switch option {
         case .meal:       return "\(URLs.Filter.mealNameSearchURL)\(lowercasedSearchText)"

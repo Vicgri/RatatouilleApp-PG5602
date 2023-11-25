@@ -14,7 +14,7 @@ enum AppearanceManager {
     case light, dark
     
     
-    // Static function to set the global user interface style 
+    // Statisk funksjon for å angi den globale brukersnittstilen
     
     static func set(_ scheme: AppearanceManager) {
         UIApplication.shared.windows.first?.rootViewController?.overrideUserInterfaceStyle = (scheme == .dark) ? .dark : .light

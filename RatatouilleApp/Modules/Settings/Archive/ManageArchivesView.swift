@@ -40,7 +40,7 @@ struct ManageArchivesView: View {
             archievedCategoriesSection
             archievedRecipesSection
             archievedAreasSection
-                .navigationTitle("Akriv")
+                .navigationTitle("Arkiv")
         }
     }
 }
@@ -176,7 +176,7 @@ private extension ManageArchivesView {
 
 private extension ManageArchivesView {
     
-  // Functions for managing the archive
+  // Funksjoner
   
     func removeFromArchive(_ recipe: Meal) {
         withAnimation {

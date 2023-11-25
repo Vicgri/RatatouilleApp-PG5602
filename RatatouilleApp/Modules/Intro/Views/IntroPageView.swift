@@ -10,14 +10,10 @@ import SwiftUI
 
 struct IntroPageView: View {
     
-    // MARK: - Properties
-    
     let imageName: String
     let title: String
     let description: String
     
-    
-    // MARK: - Main View Configuration
     
     var body: some View {
         VStack {

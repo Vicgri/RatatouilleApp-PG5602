@@ -15,14 +15,14 @@ final class CoreDataManager {
     let container: NSPersistentContainer = NSPersistentContainer(name: "RatatouilleApp")
     
     
-  // Defines a static instance of CoreDataManager, creating a singleton pattern.
-  // This ensures that there's only one instance of CoreDataManager throughout the application,
-  // which can be accessed globally using CoreDataManager.shared.
+  // Definerer en statisk instans av CoreDataManager, og oppretter et singleton-mønster.
+  // Dette sikrer at det bare er én instans av CoreDataManager i hele applikasjonen,
+  // som kan nås globalt ved hjelp av CoreDataManager.shared.
     
     static let shared = CoreDataManager()
     
     
-    // Initialization
+    // Initialisering
     
     init() {
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
@@ -32,7 +32,7 @@ final class CoreDataManager {
         })
     }
     
-    // Saves changes in the specified Core Data context and handles any errors that may occur during saving
+    // Lagrer endringer i den angitte Core Data-konteksten og håndterer eventuelle feil som kan oppstå under lagring
     
     func save(viewContext: NSManagedObjectContext) {
         do {
@@ -46,7 +46,7 @@ final class CoreDataManager {
 
 extension CoreDataManager {
     
-    // Meal Operations
+    // Måltid/Oppskrift operasjoner
     
     func addReciepe(mealDetails: MealDetailsAPI?, viewContext: NSManagedObjectContext) {
         guard let mealDetails = mealDetails else { return }
@@ -74,7 +74,7 @@ extension CoreDataManager {
 
 extension CoreDataManager {
     
-    // Ingredient Operations
+    // Ingrediens operasjoner
     
     func addIngredient(ingredientAPI: IngredientAPI?, viewContext: NSManagedObjectContext) {
         let ingredient = Ingredient(context: viewContext)
@@ -90,7 +90,7 @@ extension CoreDataManager {
 
 extension CoreDataManager {
     
-    // Category Operations
+    // Kategori operasjoner
     
     func addCategory(categoryAPI: CategoryAPI?, viewContext: NSManagedObjectContext) {
         let recieptCategory = Category(context: viewContext)
@@ -105,7 +105,7 @@ extension CoreDataManager {
 
 extension CoreDataManager {
     
-    // Area Operations
+    // Landområde operasjoner
     
     func addArea(areaAPI: AreaAPI?, iconURL: String, viewContext: NSManagedObjectContext) {
         let area = Area(context: viewContext)

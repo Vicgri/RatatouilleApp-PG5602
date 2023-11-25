@@ -37,7 +37,7 @@
 		CEBF6E142B0AFD73005D219F /* SearchCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBF6E132B0AFD73005D219F /* SearchCategoriesView.swift */; };
 		CEBF6E172B0B599F005D219F /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBF6E162B0B599F005D219F /* LaunchScreenView.swift */; };
 		CEBF6E412B0EF27A005D219F /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBF6E402B0EF27A005D219F /* StringExtensions.swift */; };
-		CEBF6E432B0F4B0E005D219F /* SearchType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBF6E422B0F4B0E005D219F /* SearchType.swift */; };
+		CEBF6E432B0F4B0E005D219F /* FilterSearchType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBF6E422B0F4B0E005D219F /* FilterSearchType.swift */; };
 		CEBF6E4A2B0F51A0005D219F /* IntroPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBF6E492B0F51A0005D219F /* IntroPageView.swift */; };
 		CEBF6E4C2B0F51B8005D219F /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBF6E4B2B0F51B8005D219F /* IntroView.swift */; };
 		CEBF6E4F2B0F53F3005D219F /* AppStorageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBF6E4E2B0F53F3005D219F /* AppStorageConstants.swift */; };
@@ -81,7 +81,7 @@
 		CEBF6E132B0AFD73005D219F /* SearchCategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCategoriesView.swift; sourceTree = "<group>"; };
 		CEBF6E162B0B599F005D219F /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		CEBF6E402B0EF27A005D219F /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
-		CEBF6E422B0F4B0E005D219F /* SearchType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchType.swift; sourceTree = "<group>"; };
+		CEBF6E422B0F4B0E005D219F /* FilterSearchType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSearchType.swift; sourceTree = "<group>"; };
 		CEBF6E492B0F51A0005D219F /* IntroPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroPageView.swift; sourceTree = "<group>"; };
 		CEBF6E4B2B0F51B8005D219F /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		CEBF6E4E2B0F53F3005D219F /* AppStorageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageConstants.swift; sourceTree = "<group>"; };
@@ -208,7 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				CE28FC8C2B049D7C00FF8DDA /* URLs.swift */,
-				CEBF6E422B0F4B0E005D219F /* SearchType.swift */,
+				CEBF6E422B0F4B0E005D219F /* FilterSearchType.swift */,
 				CEBF6E4E2B0F53F3005D219F /* AppStorageConstants.swift */,
 			);
 			path = Constants;
@@ -551,7 +551,7 @@
 				CE28FD5D2B06CD3300FF8DDA /* SearchAreaSheetView.swift in Sources */,
 				CEBF6E512B0F616C005D219F /* ContentViewModel.swift in Sources */,
 				CE28FC972B05770400FF8DDA /* DateExtensions.swift in Sources */,
-				CEBF6E432B0F4B0E005D219F /* SearchType.swift in Sources */,
+				CEBF6E432B0F4B0E005D219F /* FilterSearchType.swift in Sources */,
 				CEBF6E612B0FE466005D219F /* EditIngredientView.swift in Sources */,
 				CEBF6E0A2B09A377005D219F /* SearchIngredientsView.swift in Sources */,
 				CEBF6E5A2B0FE267005D219F /* EditAreaView.swift in Sources */,

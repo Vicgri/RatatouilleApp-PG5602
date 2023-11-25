@@ -13,7 +13,7 @@ struct SearchView: View {
     
     @Environment(\.managedObjectContext) private var viewContext
     
-    @State private var selectedSearchOption: SearchType = .meal
+    @State private var selectedSearchOption: FilterSearchType = .meal
     @State private var searchText = ""
     @State private var isPresentingSearchSheet = false
     @State private var searchResults: [MealAPI] = []
@@ -52,10 +52,10 @@ private extension SearchView {
     var searchPicker: some View {
         VStack {
             Picker(selection: $selectedSearchOption, label: Text("Search Options")) {
-                Image(systemName: "square.filled.on.square").tag(SearchType.category)
-                Image(systemName: "globe").tag(SearchType.area)
-                Image(systemName: "carrot").tag(SearchType.ingredient)
-                Image(systemName: "fork.knife.circle.fill").tag(SearchType.meal)
+                Image(systemName: "square.filled.on.square").tag(FilterSearchType.category)
+                Image(systemName: "globe").tag(FilterSearchType.area)
+                Image(systemName: "carrot").tag(FilterSearchType.ingredient)
+                Image(systemName: "fork.knife.circle.fill").tag(FilterSearchType.meal)
             }
             .pickerStyle(SegmentedPickerStyle())
             .padding([.trailing, .leading], 16)
@@ -108,7 +108,7 @@ private extension SearchView {
         VStack(alignment: .leading) {
             Text(meal.strMeal)
                 .fontWeight(.semibold)
-            Text(meal.strCategory ?? "Se mer informasjon.")
+            Text(meal.strCategory ?? "Trykk for å se mer informasjon.")
         }
     }
 }

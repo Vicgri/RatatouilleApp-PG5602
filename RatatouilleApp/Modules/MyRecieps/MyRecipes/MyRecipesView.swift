@@ -11,10 +11,10 @@ import CoreData
 
 struct MyRecipesView: View {
     
-  // Accesses the managed object context from the environment for Core Data operations
+  // Henter den administrerte objektkonteksten fra miljøet for Core Data-operasjoner
     @Environment(\.managedObjectContext) private var viewContext
     
-  // Fetch request for 'Meal' entities, sorted in reverse order by their 'name' attribute
+  // Henteforespørsel for 'Måltid'-enheter, sortert i omvendt rekkefølge etter deres 'navn'-attributt
     @FetchRequest(
         sortDescriptors: [
             SortDescriptor(\.name, order: .reverse)
@@ -66,6 +66,7 @@ struct MyRecipesView: View {
 
 private extension MyRecipesView {
 
+  // Viewet som vises hvis det ikke er lagret noen oppskrifter
     
     var emptyMealsView: some View {
         VStack(alignment: .center, content: {
@@ -156,7 +157,8 @@ private extension MyRecipesView {
 
 private extension MyRecipesView {
     
-    
+    // Funksjoner for å lagre, arkivere eller slette oppskrifter
+  
     func markAsFavorite(_ recipe: Meal) {
         withAnimation {
             recipe.isFavourite.toggle()

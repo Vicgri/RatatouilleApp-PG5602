@@ -66,8 +66,7 @@ struct EditAreaView: View {
 
 
 private extension EditAreaView {
-    
-    // MARK: - Main Logic
+  
     
     func setInitialName() {
         editedName = area.name ?? ""
